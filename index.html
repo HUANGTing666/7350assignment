@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff9900;
+        }
+
+        /* 背景图和视频容器样式 */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* 视口高度 */
+            background-image: url('img/bg.jpg'); /* 替换为你的背景图片路径 */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-section video {
+            max-width: 80%; /* 限制视频宽度 */
+            max-height: 80%; /* 限制视频高度 */
+            border: 2px solid white; /* 添加边框以突出显示 */
+            border-radius: 10px; /* 圆角效果 */
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="beginner.html">新手入门</a></li>
+            <li><a href="gear.html">装备理解</a></li>
+            <li><a href="team.html">热门阵容</a></li>
+            <li><a href="news.html">游戏咨询</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- 背景图和视频部分 -->
+<div class="hero-section">
+    <!-- 替换为你的视频路径 -->
+    <video controls>
+        <source src="video/index.mp4" type="video/mp4">
+        您的浏览器不支持视频播放。
+    </video>
+</div>
+</body>
+
+</html>
