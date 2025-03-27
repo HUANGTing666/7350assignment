@@ -17,6 +17,9 @@
             background-color: #333;
             color: white;
             padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         nav ul {
@@ -35,10 +38,25 @@
             color: white;
             text-decoration: none;
             transition: color 0.3s ease;
+            position: relative;
         }
 
-        nav ul li a:hover {
-            color: #ff9900;
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #ff9900;
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+
+        nav ul li a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
         }
 
         main {
